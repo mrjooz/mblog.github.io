@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.mrjooz.com</id>
+    <title>Mrjooz</title>
+    <updated>2023-01-31T06:03:09.711Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.mrjooz.com"/>
+    <link rel="self" href="https://www.mrjooz.com/atom.xml"/>
+    <subtitle>我，超凡绝伦的人中龙凤。</subtitle>
+    <logo>https://www.mrjooz.com/images/avatar.png</logo>
+    <icon>https://www.mrjooz.com/favicon.ico</icon>
+    <rights>All rights reserved 2023, Mrjooz</rights>
+    <entry>
+        <title type="html"><![CDATA[MIUI优化教程（去广告&更新）]]></title>
+        <id>https://www.mrjooz.com/post/miui-you-hua-jiao-cheng-qu-guang-gao-andgeng-xin/</id>
+        <link href="https://www.mrjooz.com/post/miui-you-hua-jiao-cheng-qu-guang-gao-andgeng-xin/">
+        </link>
+        <updated>2023-01-31T05:09:12.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="设置里面广告去除">设置里面广告去除</h2>
+<ol>
+<li>设置搜索“广告服务”，关闭“个性化广告推荐”</li>
+<li>设置搜索“系统广告”，关闭“系统工具广告”</li>
+<li>设置搜索“特殊权限设置”，打开“显示在上层的应用”，关闭“智能服务”、“应用商店”的权限</li>
+<li>设置搜索“特殊权限设置”，打开“修改系统设置”，关闭“智能服务”、“应用商店”的权限</li>
+<li>设置☞小爱同学☞小爱语音☞隐私管理☞隐私设置，关闭“个性化广告推荐”</li>
+<li>设置☞应用设置☞应用管理☞右上角三个点☞设置☞关闭“资源推荐</li>
+<li>设置搜索“搜索”，打开“首页展示模块”，关闭所有</li>
+<li>设置搜索“搜索”，打开“消息通知管理”，关闭所有</li>
+<li>设置搜索“搜索”，打开“关于全局搜索”，关闭“个性化内容推荐”和“个性化广告推荐”</li>
+<li>设置☞桌面☞智能助理设置☞关闭“个性化推荐”和“推荐卡片”和“热门活动”</li>
+</ol>
+<h2 id="手机管家广告去除">手机管家广告去除</h2>
+<ol>
+<li>手机管家打开“网络助手”，打开“联网控制”，拉到底下的“系统应用”，关闭“智能服务”</li>
+<li>手机管家打开“网络助手”，打开“联网控制”，点击右上角的“后台联网权限”，关闭“智能服务”</li>
+<li>手机管家☞右上角设置☞隐私设置☞关闭“个性化推荐”和“仅在WLAN下推荐”</li>
+<li>手机管家☞垃圾清理☞右上角设置☞关闭“推荐内容”和“仅在WLAN下推荐”</li>
+</ol>
+<h2 id="其他去除">其他去除</h2>
+<ol>
+<li>输入法设置：关闭“节日活动提醒”或者改成隐私模式</li>
+<li>打开桌面任一应用文件夹☞点击文件夹名字☞关闭“猜你喜欢”</li>
+<li>在任一软件安装界面☞右上角设置☞关闭“资源推荐”</li>
+<li>下载管理☞右上角三个点☞设置☞信息流设置☞关闭所有子项</li>
+<li>小米视频☞设置☞消息与推送☞关闭“接收小米推送”或者☞设置☞其他☞关闭“在线个性化推荐”和“在线服务”</li>
+<li>音乐(QQ音乐版)☞我的☞右上角设置☞通用设置☞其他☞关闭“个性化内容推荐”和“个性化广告推送”</li>
+<li>天气☞右上角三个点☞设置☞用户体验计划☞关闭所有子项</li>
+<li>日历☞右上角三个点☞设置☞用户体验计划☞关闭所有子项</li>
+<li>时钟☞右上角三个点☞生活早报☞关闭</li>
+<li>时钟☞右上角设置☞更多闹钟设置☞关闭显示生活早报</li>
+<li>应用商店☞我的☞右上角设置，关闭所有</li>
+<li>主题壁纸☞我的☞右上角设置☞隐私设置☞关闭“个性化推荐”</li>
+<li>短信☞右上角设置☞高级设置☞关闭“允许wep推送”</li>
+<li>小米钱包☞我的☞右上角设置，关闭所有</li>
+<li>米家☞我的☞设置☞消息设置☞关闭“商城消息”</li>
+<li>米家☞我的☞设置☞商城页面☞关闭</li>
+<li>小米社区☞左上角头像☞右上角设置☞隐私管理☞关闭“详情页相似推荐”和“个性化广告”</li>
+<li>浏览器，设置里面进去都关闭，注意搜索这里的热版要点一下在右上角关</li>
+</ol>
+<h2 id="禁止更新">禁止更新</h2>
+<ol>
+<li>在download文件夹下面新建“downloaded_rom”<strong>文件</strong></li>
+<li>在手机管家☞病毒扫面☞关闭检测系统版本更新</li>
+<li>在设置☞开发者选择☞关闭系统自动更新</li>
+<li>在应用锁里面添加系统更新</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[借助阿里云实现威联通外网访问]]></title>
+        <id>https://www.mrjooz.com/post/jie-zhu-a-li-yun-shi-xian-wei-lian-tong-wai-wang-fang-wen/</id>
+        <link href="https://www.mrjooz.com/post/jie-zhu-a-li-yun-shi-xian-wei-lian-tong-wai-wang-fang-wen/">
+        </link>
+        <updated>2023-01-22T02:27:27.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>威联通相比群晖来说性价比特别高，相同的价钱可以享受到更好的性能，但是威联通的本地化做的比较差，通过自带的DDNS连接设备速度比较慢，所以我们需要借助其它工具来增加体验。</p>
+</blockquote>
+<h2 id="涉及到的工具服务">涉及到的工具&amp;服务</h2>
+<ul>
+<li>阿里云域名</li>
+<li>阿里云免费证书</li>
+<li>威联通自带的ContainerStation</li>
+<li>路由器</li>
+</ul>
+<h2 id="阿里云域名购买">阿里云域名购买</h2>
+<p>在阿里云购买一个域名，一般域名都是一百以内一年，如果已经有域名可以不用购买。</p>
+<h2 id="申请阿里云免费证书">申请阿里云免费证书</h2>
+<p>在SSL免费证书模块购买免费证书，购买后点击创建证书即可申请证书，如果域名在阿里云同账号下面，在填入域名后会自带添加DNS验证信息，如果在其它平台可以手动添加DNS或者用文件的形式进行验证。</p>
+<p>证书申请通过后在威联通里面上传证书。<br>
+<img src="https://www.mrjooz.com/post-images/1674356479188.png" alt="" loading="lazy"></p>
+<h2 id="创建阿里云accesskey">创建阿里云AccessKey</h2>
+<p>在阿里云RAM管理里面创建子用户，并给子用户授予AliyunDNSFullAccess权限，<strong>注意保存AccessKey，关闭后就不会再显示</strong>。</p>
+<h2 id="使用containerstation创建aliyun-ddns">使用ContainerStation创建aliyun-ddns</h2>
+<p><strong>创建aliyun-ddns</strong><br>
+<img src="https://www.mrjooz.com/post-images/1674359539281.png" alt="" loading="lazy"></p>
+<p><strong>环境配置</strong><br>
+环境配置只要配置需要的参数就好了，其它都有默认值的，要是想配置全部的子域名都指向威联通，可以用<code>*.domain.com</code><br>
+<img src="https://www.mrjooz.com/post-images/1674359675650.png" alt="" loading="lazy"></p>
+<p><strong>网络配置</strong><br>
+<img src="https://www.mrjooz.com/post-images/1674359698459.png" alt="" loading="lazy"></p>
+<h2 id="路由器配置">路由器配置</h2>
+<p>配置完前面的步骤就已经可以通过配置的域名访问威联通外网IP了，但是这个访问的目的地是路由器，我们还需要在路由器里面配置端口转发。<br>
+比如需要访问<code>https://nas.domain.com:8443</code>的时候访问到威联通，需要把<code>8443</code>端口转发给威联通管理页面的端口。</p>
+]]></content>
+    </entry>
+</feed>

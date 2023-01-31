@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>借助阿里云实现威联通外网访问 | Mrjooz</title>
+<link rel="shortcut icon" href="https://www.mrjooz.com/favicon.ico?v=1675144985973">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.mrjooz.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="借助阿里云实现威联通外网访问 | Mrjooz - Atom Feed" href="https://www.mrjooz.com/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+威联通相比群晖来说性价比特别高，相同的价钱可以享受到更好的性能，但是威联通的本地化做的比较差，通过自带的DDNS连接设备速度比较慢，所以我们需要借助其它工具来增加体验。
+
+涉及到的工具&amp;服务
+
+阿里云域名
+阿里云免费证书
+威联通自..." />
+    <meta name="keywords" content="NAS" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://www.mrjooz.com">
+  <img class="avatar" src="https://www.mrjooz.com/images/avatar.png?v=1675144985973" alt="">
+  </a>
+  <h1 class="site-title">
+    Mrjooz
+  </h1>
+  <p class="site-description">
+    我，超凡绝伦的人中龙凤。
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/mrjooz" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              借助阿里云实现威联通外网访问
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-01-22
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://www.mrjooz.com/tag/LcKaTQwzO/" class="post-tag">
+                  # NAS
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://www.mrjooz.com/post-images/jie-zhu-a-li-yun-shi-xian-wei-lian-tong-wai-wang-fang-wen.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <blockquote>
+<p>威联通相比群晖来说性价比特别高，相同的价钱可以享受到更好的性能，但是威联通的本地化做的比较差，通过自带的DDNS连接设备速度比较慢，所以我们需要借助其它工具来增加体验。</p>
+</blockquote>
+<h2 id="涉及到的工具服务">涉及到的工具&amp;服务</h2>
+<ul>
+<li>阿里云域名</li>
+<li>阿里云免费证书</li>
+<li>威联通自带的ContainerStation</li>
+<li>路由器</li>
+</ul>
+<h2 id="阿里云域名购买">阿里云域名购买</h2>
+<p>在阿里云购买一个域名，一般域名都是一百以内一年，如果已经有域名可以不用购买。</p>
+<h2 id="申请阿里云免费证书">申请阿里云免费证书</h2>
+<p>在SSL免费证书模块购买免费证书，购买后点击创建证书即可申请证书，如果域名在阿里云同账号下面，在填入域名后会自带添加DNS验证信息，如果在其它平台可以手动添加DNS或者用文件的形式进行验证。</p>
+<p>证书申请通过后在威联通里面上传证书。<br>
+<img src="https://www.mrjooz.com/post-images/1674356479188.png" alt="" loading="lazy"></p>
+<h2 id="创建阿里云accesskey">创建阿里云AccessKey</h2>
+<p>在阿里云RAM管理里面创建子用户，并给子用户授予AliyunDNSFullAccess权限，<strong>注意保存AccessKey，关闭后就不会再显示</strong>。</p>
+<h2 id="使用containerstation创建aliyun-ddns">使用ContainerStation创建aliyun-ddns</h2>
+<p><strong>创建aliyun-ddns</strong><br>
+<img src="https://www.mrjooz.com/post-images/1674359539281.png" alt="" loading="lazy"></p>
+<p><strong>环境配置</strong><br>
+环境配置只要配置需要的参数就好了，其它都有默认值的，要是想配置全部的子域名都指向威联通，可以用<code>*.domain.com</code><br>
+<img src="https://www.mrjooz.com/post-images/1674359675650.png" alt="" loading="lazy"></p>
+<p><strong>网络配置</strong><br>
+<img src="https://www.mrjooz.com/post-images/1674359698459.png" alt="" loading="lazy"></p>
+<h2 id="路由器配置">路由器配置</h2>
+<p>配置完前面的步骤就已经可以通过配置的域名访问威联通外网IP了，但是这个访问的目的地是路由器，我们还需要在路由器里面配置端口转发。<br>
+比如需要访问<code>https://nas.domain.com:8443</code>的时候访问到威联通，需要把<code>8443</code>端口转发给威联通管理页面的端口。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E5%B7%A5%E5%85%B7%E6%9C%8D%E5%8A%A1">涉及到的工具&amp;服务</a></li>
+<li><a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0">阿里云域名购买</a></li>
+<li><a href="#%E7%94%B3%E8%AF%B7%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E8%AF%81%E4%B9%A6">申请阿里云免费证书</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E9%98%BF%E9%87%8C%E4%BA%91accesskey">创建阿里云AccessKey</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8containerstation%E5%88%9B%E5%BB%BAaliyun-ddns">使用ContainerStation创建aliyun-ddns</a></li>
+<li><a href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE">路由器配置</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '10f89b7ff9d018b58560',
+    clientSecret: '8cc704a287ac3ff84f87bc633ea4877e6609e8bb',
+    repo: 'mblog.github.io',
+    owner: 'mrjooz',
+    admin: ['mrjooz'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://www.mrjooz.com" target="_blank">&nbsp;Mrjooz</a>
+  <a class="rss" href="https://www.mrjooz.com/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
